@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      USER_NAME: ${{ github.actor }}
+      USERNAME: ${{ github.actor }}
       PAT: ${{ secrets.PAT }}
            
     steps:
@@ -25,5 +25,7 @@ jobs:
       run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
+    - name: Authenticate to GitHub packages
+      run: dotnet nuget add source --username ${USERNAME} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Zina-420001498/index.json"
     - name: Push
-      run: dotnet nuget push PrimeService.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${PAT}
+      run: dotnet nuget push PrimeService.${VERSION}.nupkg --api-key ${PAT} --source "github"
