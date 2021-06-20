@@ -6,7 +6,7 @@
     <Title>PrimeService</Title>
     <RootNamespace>PrimeService</RootNamespace>
     <AssemblyName>PrimeService</AssemblyName>
-    <Version>0.0.0</Version>
+    <Version>0.0.1</Version>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>    
   </PropertyGroup>
 
