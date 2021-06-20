@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>PrimeService</Product>
+    <Title>PrimeService</Title>
+    <RootNamespace>PrimeService</RootNamespace>
+    <AssemblyName>PrimeService</AssemblyName>
+    <Version>0.0.1</Version>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>    
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>PrimeService</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Zina-420001498/dotnet-build-test</RepositoryUrl>
+  </PropertyGroup>
+  
 
 </Project>
